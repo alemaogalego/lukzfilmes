@@ -4,12 +4,12 @@ Um projeto Java para gerenciamento de filmes.
 
 ## Estrutura do Projeto
 
-- **Filme.java** - Classe que representa um filme com informações como nome, duração, gênero, avaliação, etc.
+- **br.com.luukzfilmes.modelos.Filme.java** - Classe que representa um filme com informações como nome, duração, gênero, avaliação, etc.
 - **Main.java** - Classe principal da aplicação
 
 ## Características
 
-- Classe `Filme` com atributos:
+- Classe `br.com.luukzfilmes.modelos.Filme` com atributos:
   - Nome do filme
   - Duração em minutos
   - Gênero
