@@ -1,42 +1,23 @@
 public class Filme {
-    private String nome;
-    private int duracaoEmMinutos;
-    private String genero;
-    boolean incluidoNoPlano;
-    private double avaliacao;
-    private int totalDeAvaliacoes;
 
-    public Filme(String nome, int duracaoEmMinutos, String genero, boolean incluidoNoPlano, double avaliacao, int totalDeAvaliacoes) {
-        this.nome = nome;
-        this.duracaoEmMinutos = duracaoEmMinutos;
-        this.genero = genero;
-        this.incluidoNoPlano = incluidoNoPlano;
-        this.avaliacao = avaliacao;
-        this.totalDeAvaliacoes = totalDeAvaliacoes;
+    String nome;
+    int anoDeLancamento;
+    boolean incluirNoPlano;
+    double somaDasAvaliacoes;
+    int totalDeAvaliacoes;
+    int duracaoEmMinutos;
+
+    void exibirFichaTecnica() {
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
-    public String getNome() {
-        return nome;
+    void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes ++;
     }
 
-    public int getDuracaoEmMinutos() {
-        return duracaoEmMinutos;
+    double obterMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
-    }
-
-    public double getAvaliacao() {
-        return avaliacao;
-    }
-
-    public int getTotalDeAvaliacoes() {
-        return totalDeAvaliacoes;
-    }
-
 }
