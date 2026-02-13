@@ -10,6 +10,7 @@ public class Main {
 
 
 
+
         meuFilme.exibirFichaTecnica();
         meuFilme.avalia(8);
         meuFilme.avalia(5.0);
