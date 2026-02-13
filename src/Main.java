@@ -9,6 +9,7 @@ public class Main {
         meuFilme.setDuracaoEmMinutos(175);
 
 
+
         meuFilme.exibirFichaTecnica();
         meuFilme.avalia(8);
         meuFilme.avalia(5.0);
