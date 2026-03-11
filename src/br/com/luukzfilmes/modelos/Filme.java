@@ -1,6 +1,8 @@
 package br.com.luukzfilmes.modelos;
 
-public class Filme extends Titulo {
+import br.com.luukzfilmes.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public String getDiretor() {
@@ -12,4 +14,8 @@ public class Filme extends Titulo {
         this.diretor = diretor;
     }
 
+    @Override
+    public int getClassificacao() {
+        return (int) obterMedia();
+    }
 }
