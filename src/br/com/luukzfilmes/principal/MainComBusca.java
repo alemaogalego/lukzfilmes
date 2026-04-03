@@ -49,10 +49,16 @@ public class MainComBusca {
 
             try {
                 Titulo meuTitulo = new Titulo(meuTituloOmdb);
+                System.out.println("titulo convertido com sucesso");
                 System.out.println(meuTitulo);
             }catch (NumberFormatException e) {
                 System.out.println("Ocorreu um erro ao converter os dados do filme: " + e.getMessage());
+            }catch (IllegalArgumentException e){
+                System.out.println("Ocorreu um erro ao criar o objeto Titulo: " + e.getMessage());
+            }catch (Exception e) {
+                System.out.println("Ocorreu um erro inesperado: " + e.getMessage());
             }
+
 
 
 
