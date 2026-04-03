@@ -1,5 +1,6 @@
 package br.com.luukzfilmes.principal;
 
+import br.com.luukzfilmes.excecao.ErroDeConversaoDeAnoException;
 import br.com.luukzfilmes.modelos.Titulo;
 import br.com.luukzfilmes.modelos.TituloOmdb;
 import com.google.gson.Gson;
@@ -55,8 +56,8 @@ public class MainComBusca {
                 System.out.println("Ocorreu um erro ao converter os dados do filme: " + e.getMessage());
             }catch (IllegalArgumentException e){
                 System.out.println("Ocorreu um erro ao criar o objeto Titulo: " + e.getMessage());
-            }catch (Exception e) {
-                System.out.println("Ocorreu um erro inesperado: " + e.getMessage());
+            }catch (ErroDeConversaoDeAnoException e) {
+                System.out.println(e.getMessage());
             }
 
 
