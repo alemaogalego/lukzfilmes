@@ -46,8 +46,19 @@ public class MainComBusca {
             TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
             System.out.println(meuTituloOmdb);
 
-            Titulo meuTitulo = new Titulo(meuTituloOmdb);
-            System.out.println(meuTitulo);
+
+            try {
+                Titulo meuTitulo = new Titulo(meuTituloOmdb);
+                System.out.println(meuTitulo);
+            }catch (NumberFormatException e) {
+                System.out.println("Ocorreu um erro ao converter os dados do filme: " + e.getMessage());
+            }
+
+
+
+            System.out.println("programa finalizado");
+
+
 
 
 
