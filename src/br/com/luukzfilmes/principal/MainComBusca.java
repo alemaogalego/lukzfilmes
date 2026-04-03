@@ -1,7 +1,9 @@
 package br.com.luukzfilmes.principal;
 
 import br.com.luukzfilmes.modelos.Titulo;
+import br.com.luukzfilmes.modelos.TituloOmdb;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.io.FileInputStream;
@@ -35,9 +37,17 @@ public class MainComBusca {
             String json = response.body();
             System.out.println(json);
 
-            Gson gson = new Gson();
-            Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(com.google.gson.FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
+
+            //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+
+            TituloOmdb meuTitulo = gson.fromJson(json, TituloOmdb.class);
             System.out.println(meuTitulo);
+
+
+
         }
     }
 }
